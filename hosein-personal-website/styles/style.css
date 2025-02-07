@@ -164,13 +164,13 @@ body {
 
 .personal {
   background: linear-gradient(rgba(0, 29, 61, 0.7), rgba(0, 29, 61, 0.7)),
-              url('personal.png') center/cover;
+              url('../src/personal.png') center/cover;
   filter: grayscale(100%);
 }
 
 .professional {
   background: linear-gradient(rgba(0, 29, 61, 0.7), rgba(0, 29, 61, 0.7)),
-              url('professional.png') center/cover;
+              url('../src/professional.png') center/cover;
   filter: grayscale(100%);
 }
 
