@@ -60,22 +60,22 @@
   
   .personal {
     background: linear-gradient(rgba(0, 29, 61, 0.7), rgba(0, 29, 61, 0.7)),
-                url('../../src/personal.png') center/cover;
+                url('/assets/personal.png') center/cover;
   }
   
   .professional {
     background: linear-gradient(rgba(0, 29, 61, 0.7), rgba(0, 29, 61, 0.7)),
-                url('../../src/professional.png') center/cover;
+                url('/assets/professional.png') center/cover;
   }
   
   .personal:hover {
     background: linear-gradient(rgba(0, 29, 61, 0.3), rgba(0, 29, 61, 0.3)),
-                url('../../src/personal.png') center/cover;
+                url('/assets/personal.png') center/cover;
 
   }
   .professional:hover {
     background: linear-gradient(rgba(0, 29, 61, 0.3), rgba(0, 29, 61, 0.3)),
-                url('../../src/professional.png') center/cover;
+                url('/assets/professional.png') center/cover;
   }
   @media (max-width: 768px) {
     .life-sections {
