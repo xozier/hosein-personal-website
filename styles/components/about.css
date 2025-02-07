@@ -1,0 +1,103 @@
+/* About Page Styles */
+.about {
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  
+  .about-image {
+    position: sticky;
+    top: 120px;
+  }
+  
+  .about-image .profile-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  .about-text {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .about-text h1 {
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .about-text h2 {
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+  }
+  
+  .about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 2;
+    color: var(--white);
+    opacity: 0.9;
+    letter-spacing: 0.09em;
+  }
+  
+  .cv-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cv-btn:hover {
+    transform: translateY(-3px);
+    background-color: #ffd333;
+  }
+  
+  .about-section {
+    margin: 2rem 0;
+  }
+  
+  .about-section h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .education-list, .interests-list {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .education-list li, .interests-list li {
+    margin-bottom: 0.5rem;
+
+  }
+  
+  .text-accent-1 {
+    color: var(--accent); 
+    font-weight: 500;
+  }
+  
+  .text-accent-2 {
+    color: var(--accent-2); 
+    font-weight: 500;
+  }
+  
+  .text-accent-3 {
+    color: var(--accent-3); /* Purple */
+    font-weight: 500;
+  }
+  

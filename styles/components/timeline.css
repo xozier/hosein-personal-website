@@ -1,0 +1,140 @@
+.timeline-section {
+  padding: 4rem 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.timeline {
+  position: relative;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* The line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background: var(--accent);
+}
+
+.timeline-item {
+  position: relative;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--primary);
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Year label above dot */
+.timeline-dot::before {
+  content: attr(data-year);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.timeline-content {
+  position: absolute;
+  width: 200px;
+  background: var(--secondary);
+  border-radius: 15px;
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+  font-size: 0.9rem;
+}
+
+/* Alternating content position */
+.timeline-item:nth-child(odd) .timeline-content {
+  bottom: 35px;
+  transform: translateY(-10px);
+  left: -80px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  top: 35px;
+  transform: translateY(10px);
+  left: -80px;
+}
+
+/* Show content on hover */
+.timeline-item:hover .timeline-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-date {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.timeline-content ul {
+  list-style: disc;
+  margin-left: 1.2rem;
+  color: var(--white);
+}
+
+.timeline-content li {
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+  }
+  
+  .timeline-dot::before {
+    font-size: 0.7rem;
+    top: -20px;
+  }
+  
+  .timeline-content {
+    width: 160px;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    left: -70px;
+  }
+}
